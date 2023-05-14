@@ -194,6 +194,7 @@ body {
 
 /* Footer */
 #footer {
+    margin-top: 10rem;
     background: #111111;
 }
 
@@ -319,5 +320,9 @@ body {
     .header-container .btn {
         border-radius: 5px;
         width: 80%;
+    }
+
+    #footer {
+        margin-top: 4rem;
     }
 }
