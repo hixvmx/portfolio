@@ -1,6 +1,3 @@
-const moonIMG = document.getElementById('moon');
-const sunIMG  = document.getElementById('sun');
-
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 
@@ -19,59 +16,4 @@ navLink.forEach((n) => n.addEventListener("click", closeMenu));
 function closeMenu() {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
-}
-
-// Event Listeners: Handling toggle event
-const toggleSwitch = document.querySelector(
-    '.theme-switch input[type="checkbox"]'
-);
-
-function switchTheme(e) {
-    if (e.target.checked) {
-        document.documentElement.setAttribute("data-theme", "dark");
-        moonIMG.style.display = 'none';
-        sunIMG.style.display = 'block';
-    } else {
-        document.documentElement.setAttribute("data-theme", "light");
-        sunIMG.style.display = 'none';
-        moonIMG.style.display = 'block';
-    }
-}
-
-toggleSwitch.addEventListener("change", switchTheme, false);
-
-//  Store color theme for future visits
-
-function switchTheme(e) {
-    if (e.target.checked) {
-        document.documentElement.setAttribute("data-theme", "dark");
-        localStorage.setItem("theme", "dark"); //add this
-
-        sunIMG.style.display = 'block';
-        moonIMG.style.display = 'none';
-    } else {
-        document.documentElement.setAttribute("data-theme", "light");
-        localStorage.setItem("theme", "light"); //add this
-
-        sunIMG.style.display = 'none';
-        moonIMG.style.display = 'block';
-    }
-}
-
-// Save user preference on load
-
-const currentTheme = localStorage.getItem("theme")
-    ? localStorage.getItem("theme")
-    : null;
-
-if (currentTheme) {
-    document.documentElement.setAttribute("data-theme", currentTheme);
-
-    if (currentTheme === "dark") {
-        toggleSwitch.checked = true;
-
-        moonIMG.style.display = 'none';
-    } else {
-        sunIMG.style.display = 'none';
-    }
 }
