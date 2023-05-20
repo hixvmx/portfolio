@@ -75,6 +75,7 @@ h2::selection {
     transition: 0.4s ease-in-out;
     cursor: pointer;
     background-size: cover;
+    background-position: center;
 }
 
 .card:hover {
