@@ -5,7 +5,8 @@
     /* Colors */
     --primary-color: #ffffff1a;
     --secondary-color: #3f3f3f;
-    --bg-primary: #0f0f0f;
+/*     --bg-primary: #0f0f0f; */
+    --bg-primary: red;
     --text-color: #f1f1f1;
     --bg-secondary: #eff1fe;
     --card-background: #1a1a1a;
